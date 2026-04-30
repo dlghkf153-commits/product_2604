@@ -298,6 +298,18 @@ h2 {
 .footer-nav a { margin: 0 10px; color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
 .copyright { margin-top: 2rem; font-size: 0.85rem; color: #999; }
 
+@keyframes bounceIn {
+  0% { transform: scale(0.3); opacity: 0; }
+  50% { transform: scale(1.05); opacity: 1; }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
 @media (max-width: 620px) {
   .nav-links { display: none; }
   .controls { align-items: stretch; flex-direction: column; }
