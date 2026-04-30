@@ -55,6 +55,34 @@ h1 {
 .range-31 { background-color: #aaa; }    /* 31-40: 회색 */
 .range-41 { background-color: #b0d840; } /* 41-45: 초록 */
 
+.fixed-numbers-container {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#fixed-input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 250px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+#fixed-input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
 #generate-btn {
   padding: 12px 30px;
   font-size: 1.1rem;

@@ -1,10 +1,39 @@
 document.getElementById('generate-btn').addEventListener('click', () => {
-  const numbers = generateLottoNumbers();
+  const fixedInput = document.getElementById('fixed-input').value;
+  const fixedNumbers = parseFixedNumbers(fixedInput);
+  
+  if (fixedNumbers === null) {
+    alert('고정 숫자는 1~45 사이의 숫자여야 하며, 중복될 수 없습니다.');
+    return;
+  }
+  
+  if (fixedNumbers.length > 6) {
+    alert('고정 숫자는 최대 6개까지만 입력 가능합니다.');
+    return;
+  }
+
+  const numbers = generateLottoNumbers(fixedNumbers);
   displayNumbers(numbers);
 });
 
-function generateLottoNumbers() {
-  const numbers = [];
+function parseFixedNumbers(input) {
+  if (!input.trim()) return [];
+  
+  const parts = input.split(',').map(s => s.trim()).filter(s => s !== '');
+  const nums = [];
+  
+  for (const p of parts) {
+    const n = parseInt(p);
+    if (isNaN(n) || n < 1 || n > 45 || nums.includes(n)) {
+      return null;
+    }
+    nums.push(n);
+  }
+  return nums;
+}
+
+function generateLottoNumbers(fixedNumbers = []) {
+  const numbers = [...fixedNumbers];
   while (numbers.length < 6) {
     const num = Math.floor(Math.random() * 45) + 1;
     if (!numbers.includes(num)) {
