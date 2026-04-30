@@ -1,1 +1,75 @@
-/* Add styles here */
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f2f5;
+}
+
+.container {
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.numbers-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.ball.placeholder {
+  background-color: #ddd;
+  color: #999;
+  text-shadow: none;
+}
+
+/* 로또 번호별 색상 (공식 색상 기준) */
+.range-1 { background-color: #fbc400; } /* 1-10: 노랑 */
+.range-11 { background-color: #69c8f2; } /* 11-20: 파랑 */
+.range-21 { background-color: #ff7272; } /* 21-30: 빨강 */
+.range-31 { background-color: #aaa; }    /* 31-40: 회색 */
+.range-41 { background-color: #b0d840; } /* 41-45: 초록 */
+
+#generate-btn {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#generate-btn:hover {
+  background-color: #357abd;
+}
+
+#generate-btn:active {
+  transform: scale(0.98);
+}
