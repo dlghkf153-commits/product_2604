@@ -3,69 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>로또 번호 추천기</title>
+  <title>프리미엄 로또 번호 분석 및 추천기 | SmartLotto</title>
+  <meta name="description" content="확률 통계 기반의 로또 번호 추천 및 사용자 맞춤 고정수 설정 기능을 제공하는 프리미엄 분석 도구입니다.">
   <meta name="google-adsense-account" content="ca-pub-3293250383292925">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3293250383292925"
      crossorigin="anonymous"></script>
   <link href="/style.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <h1>로또 번호 추천</h1>
-    <div id="lotto-numbers" class="numbers-container">
-      <div class="ball placeholder">?</div>
-      <div class="ball placeholder">?</div>
-      <div class="ball placeholder">?</div>
-      <div class="ball placeholder">?</div>
-      <div class="ball placeholder">?</div>
-      <div class="ball placeholder">?</div>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="logo">SmartLotto</a>
+      <ul class="nav-links">
+        <li><a href="#generator">번호 생성</a></li>
+        <li><a href="#analysis">번호 분석 가이드</a></li>
+        <li><a href="#inquiry">제휴 문의</a></li>
+      </ul>
     </div>
-    <div class="fixed-numbers-container">
-      <label for="fixed-input">고정 숫자 (쉼표로 구분, 최대 6개):</label>
-      <input type="text" id="fixed-input" placeholder="예: 7, 21, 33">
+  </nav>
+
+  <header class="hero">
+    <h1>당신의 행운을 위한 전략적 선택</h1>
+    <p>단순한 무작위 추출을 넘어, 당신만의 고정수를 조합하여 최적의 번호를 발견하세요.</p>
+  </header>
+
+  <main class="content-wrapper">
+    <section id="generator" class="section">
+      <div class="card lotto-card">
+        <h2>로또 번호 추천 시스템</h2>
+        <div id="lotto-numbers" class="numbers-container">
+          <div class="ball placeholder">?</div>
+          <div class="ball placeholder">?</div>
+          <div class="ball placeholder">?</div>
+          <div class="ball placeholder">?</div>
+          <div class="ball placeholder">?</div>
+          <div class="ball placeholder">?</div>
+        </div>
+        <div class="fixed-numbers-container">
+          <label for="fixed-input">행운의 고정수 (쉼표 구분, 최대 6개)</label>
+          <input type="text" id="fixed-input" placeholder="예: 7, 21, 33">
+          <p class="input-hint">원하는 번호를 고정하고 나머지 번호를 생성합니다.</p>
+        </div>
+        <button id="generate-btn" class="btn-primary">행운의 번호 추출하기</button>
+      </div>
+    </section>
+
+    <section id="analysis" class="section text-content">
+      <div class="card">
+        <h2>로또 번호 선택 가이드: 과학적 접근</h2>
+        <p>로또는 확률의 게임이지만, 많은 이용자들이 통계적 관점에서 번호를 선택합니다. SmartLotto는 다음과 같은 분석 관점을 제안합니다.</p>
+        <ul class="guide-list">
+          <li><strong>균형 있는 조합:</strong> 홀수와 짝수의 비율을 3:3 또는 2:4 정도로 유지하는 것이 통계적으로 빈번하게 나타납니다.</li>
+          <li><strong>총합의 범위:</strong> 당첨 번호 6개의 총합은 보통 121에서 160 사이에서 가장 많이 발생합니다.</li>
+          <li><strong>고정수 전략:</strong> 자신만의 의미 있는 번호를 고정수로 활용하여 조합의 수를 전략적으로 관리하세요.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="inquiry" class="section">
+      <div class="card">
+        <h2>서비스 제휴 및 문의</h2>
+        <p>SmartLotto와 함께 성장할 파트너를 찾습니다.</p>
+        <form action="https://formspree.io/f/mgodwbqn" method="POST" id="inquiry-form" class="pro-form">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="성함/업체명" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="_replyto" placeholder="이메일 주to" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="협력 제안 또는 문의 내용을 상세히 작성해 주세요." required></textarea>
+          </div>
+          <button type="submit" id="submit-btn" class="btn-secondary">문의 제출하기</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section">
+      <div id="disqus_thread"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2026 SmartLotto. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="#">개인정보처리방침</a>
+        <a href="#">이용약관</a>
+      </nav>
     </div>
-    <button id="generate-btn">번호 생성하기</button>
+  </footer>
 
-    <hr class="divider">
-
-    <div class="inquiry-container">
-      <h2>제휴 문의</h2>
-      <form action="https://formspree.io/f/mgodwbqn" method="POST" id="inquiry-form">
-        <div class="form-group">
-          <input type="text" name="name" placeholder="성함/업체명" required>
-        </div>
-        <div class="form-group">
-          <input type="email" name="_replyto" placeholder="이메일 주소" required>
-        </div>
-        <div class="form-group">
-          <textarea name="message" placeholder="문의 내용" required></textarea>
-        </div>
-        <button type="submit" id="submit-btn">문의 보내기</button>
-      </form>
-    </div>
-
-    <hr class="divider">
-
-    <div id="disqus_thread"></div>
-    <script>
-        /**
-        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-        /*
-        var disqus_config = function () {
-        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-        */
-        (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://product-2604.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
+  <script>
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://product-2604.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
   <script defer src="/main.js"></script>
 </body>
 </html>
