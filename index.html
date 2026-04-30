@@ -31,22 +31,38 @@
   <main class="content-wrapper">
     <!-- 1. 메인 도구 영역 -->
     <section id="generator" class="section">
-      <div class="card lotto-card">
-        <h2>프리미엄 로또 번호 추출기</h2>
-        <div id="lotto-numbers" class="numbers-container">
-          <div class="ball placeholder">?</div>
-          <div class="ball placeholder">?</div>
-          <div class="ball placeholder">?</div>
-          <div class="ball placeholder">?</div>
-          <div class="ball placeholder">?</div>
-          <div class="ball placeholder">?</div>
+      <div class="card lotto-card-container">
+        <div class="panel" aria-label="로또 번호 추첨">
+          <div class="controls">
+            <label for="gameCount">
+              게임 수
+              <select id="gameCount">
+                <option value="1">1게임</option>
+                <option value="3">3게임</option>
+                <option value="5" selected>5게임</option>
+                <option value="10">10게임</option>
+              </select>
+            </label>
+            <label for="fixedNumbers">
+              고정번호
+              <input
+                id="fixedNumbers"
+                type="text"
+                inputmode="numeric"
+                placeholder="예: 3, 12, 27"
+                aria-describedby="fixedHelp"
+              >
+            </label>
+            <button type="button" id="drawButton" class="btn-draw">번호 추첨</button>
+            <button type="button" class="btn-copy" id="copyButton">결과 복사</button>
+          </div>
+
+          <p id="fixedHelp" class="input-hint">고정번호는 최대 6개까지 입력할 수 있고, 쉼표나 공백으로 구분하면 됩니다.</p>
+          <div class="toast" id="toast" role="status" aria-live="polite"></div>
+          <div class="results" id="results">
+            <div class="empty">번호 추첨 버튼을 눌러 행운의 번호를 만들어보세요.</div>
+          </div>
         </div>
-        <div class="fixed-numbers-container">
-          <label for="fixed-input">고정수 필터링 (최대 6개)</label>
-          <input type="text" id="fixed-input" placeholder="예: 7, 15, 29">
-          <p class="input-hint">선택하신 번호를 포함하여 확률적으로 균형 잡힌 조합을 생성합니다.</p>
-        </div>
-        <button id="generate-btn" class="btn-primary">최적 조합 생성하기</button>
       </div>
     </section>
 
