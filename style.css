@@ -298,6 +298,73 @@ h2 {
 .footer-nav a { margin: 0 10px; color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
 .copyright { margin-top: 2rem; font-size: 0.85rem; color: #999; }
 
+/* Disclaimer / Notice Box */
+.disclaimer-note {
+  font-size: 0.85rem;
+  color: #6b7280;
+  background: #f3f4f6;
+  border-left: 3px solid #9ca3af;
+  padding: 10px 14px;
+  border-radius: 4px;
+  margin-top: 14px;
+}
+
+/* Check List */
+.check-list {
+  list-style: none;
+  padding: 0;
+}
+
+.check-list li {
+  padding: 6px 0 6px 28px;
+  position: relative;
+  color: var(--text-muted);
+}
+
+.check-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+/* FAQ */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 1.5rem;
+}
+
+.faq-item {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  border-left: 4px solid var(--primary-color);
+}
+
+.faq-item h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--primary-color);
+  font-size: 1rem;
+  text-align: left;
+}
+
+.faq-item p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* About page article heading */
+.article h1 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
 @keyframes bounceIn {
   0% { transform: scale(0.3); opacity: 0; }
   50% { transform: scale(1.05); opacity: 1; }
