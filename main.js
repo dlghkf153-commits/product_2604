@@ -1,3 +1,22 @@
+const heroMessages = [
+  {
+    h1: "이제 당신이 1등의 주인공입니다",
+    p: "지금까지는 남의 이야기였습니다. 로또 20년 당첨 데이터가 분석한 황금번호로, 이번 주 토요일을 준비하십시오."
+  },
+  {
+    h1: "평생 달려온 가장에게,<br>이번엔 하늘이 응원합니다",
+    p: "쉬지 않고 달려온 당신의 노고를 알고 있습니다. 역대 당첨 통계와 황금 알고리즘으로 이번 주 특별한 번호를 뽑아보십시오."
+  },
+  {
+    h1: "오십이 넘어도<br>인생역전은 토요일 밤에 시작됩니다",
+    p: "대한민국 수많은 당첨자도 처음엔 번호 하나였습니다. 당신의 황금번호를 지금 뽑아보십시오."
+  }
+];
+
+const randomHero = heroMessages[Math.floor(Math.random() * heroMessages.length)];
+document.getElementById("hero-h1").innerHTML = randomHero.h1;
+document.getElementById("hero-p").innerHTML = randomHero.p;
+
 const gameCount = document.querySelector("#gameCount");
 const fixedNumbersInput = document.querySelector("#fixedNumbers");
 const drawButton = document.querySelector("#drawButton");
